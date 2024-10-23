@@ -3,3 +3,5 @@
     2. `pip install tweepy`
 
 will try again with playwright
+
+need to figure out ratelimit for twitter
