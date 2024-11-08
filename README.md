@@ -1,6 +1,10 @@
 1. PACKAGES
     1. `pip install anthropic`
     2. `pip install tweepy`
+    3. `pip install ollama`
+
+2. Download Ollama for your machine `https://ollama.com/download`
+    - `ollama run {model}` to download model
 
 will try again with playwright
 
