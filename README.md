@@ -18,3 +18,5 @@ ollama already installed
 have to create prompts next and templates
 
 get cookies from a new a account 
+
+need to sort thru response
