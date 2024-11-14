@@ -21,3 +21,5 @@ have to create prompts next and templates
 get cookies from a new a account 
 
 need to sort thru response
+
+got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays
