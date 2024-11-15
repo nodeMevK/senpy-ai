@@ -8,18 +8,28 @@
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
 
-will try again with playwright
+3. **TODO** 
 
-need to figure out ratelimit for twitter
+    1. will try again with playwright
 
-with ollama implementation, not sure if i still have to download the llama model as well
+    2. need to figure out ratelimit for twitter
 
-ollama already installed
+    3. with ollama implementation, not sure if i still have to download the llama model as well
 
-have to create prompts next and templates
+    4. ~~ollama already installed~~
 
-get cookies from a new a account 
+    5. have to create prompts next and templates
 
-need to sort thru response
+    6. ~~get cookies from a new a account~~ 
 
-got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays
+    7. ~~need to sort thru response~~
+
+    8. got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays
+
+    9. CLEAN UP, check for specific entry types to avoid error 
+
+
+
+
+
+
