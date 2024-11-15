@@ -48,7 +48,7 @@ print(tg)'''
 #print(getUserId("notthreadguy"))
 #print(getUserId(""))
 
-tweets = scraper.tweets([1426732252768182281],limit=1)
+tweets = scraper.tweets([1426732252768182281],limit=10)
 #print(tweets)
 '''print("this is df")
 print("\n\n")
@@ -61,17 +61,22 @@ print("this is rest_id")
 print(newDf['rest_id'])'''
 
 new_tweet = getTweetText(tweets)
-#print("this is new_tweet")
-#print(new_tweet)
+'''print("this is new_tweet")
+print(new_tweet)'''
 
 print(len(tweets[0]))
 
 #print(tweets[0])
 
 
-for entry in new_tweet['timeline_v2']['timeline']['instructions'][1]['entry']['content']:
-    print(entry)
-    print("\n")
+for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
+    print(type(entry))
+    print(entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
+    #for _ in len(entry):
+        #print(content['itemContent']['tweet_results']['result']['legacy']['full_text'])
+    #print(entry)
+    #print("\n\n\n\n")
+    
 
 print(len(new_tweet['timeline_v2']['timeline']['instructions']))
 '''for value in new_tweet['timeline_v2'].values():
@@ -79,7 +84,7 @@ print(len(new_tweet['timeline_v2']['timeline']['instructions']))
     print("\n\n")'''
 
 '''with open('tweetData.txt', 'w') as file:
-    json.dump(new_tweet, file)  '''  
+    json.dump(new_tweet, file) '''  
 
 #print(account.home_latest_timeline(1))
 
