@@ -30,6 +30,8 @@
 
     10. Cleaned up a little but need to sort error and try, except statement 
 
+    11. need to relax with requets being made, getting data ready for pandas df
+
 
 
 
