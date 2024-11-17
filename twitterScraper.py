@@ -10,6 +10,7 @@ import json
 load_dotenv(find_dotenv())
 
 def getUserId(username):
+    ''' get id of twitter user '''
     result = scraper.users([username])
     return result[0]['data']['user']['result']['rest_id']
 
@@ -18,6 +19,7 @@ def getTweets(id):
     return result
 
 def organizeTweetData(tweets):
+    ''' Organize tweets into a pandas dataframe '''
     df = pd.json_normalize(tweets[0])
     return df
 
@@ -40,6 +42,8 @@ def getTweetInfo():
 
     res_arr = []
 
+    num = 1
+
     for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
         res = {
             "handle": "",
@@ -47,16 +51,23 @@ def getTweetInfo():
             "tweet_id": "",
             "timestamp": ""
         }
-
         try:
             #print(type(entry))
-            print(entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
+            if (entry['entryId'][:5] == "tweet"):
+                print(str(num) + ": " + entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
+                num += 1
 
+            else:
+
+                # TODO
+
+                print("either a reply or something else .. ")
             #res["tweet"] = entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text']
             #res_arr.append(res)
         except KeyError as e:
             print(e)
             continue
+                    
     return res_arr
     
 
@@ -96,16 +107,16 @@ print(new_tweet)'''
 #print(tweets[0])
 
 
-for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
+'''for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
     print(type(entry))
     print(entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
     #for _ in len(entry):
         #print(content['itemContent']['tweet_results']['result']['legacy']['full_text'])
     #print(entry)
-    #print("\n\n\n\n")
+    #print("\n\n\n\n")'''
     
 
-print(len(new_tweet['timeline_v2']['timeline']['instructions']))
+#print(len(new_tweet['timeline_v2']['timeline']['instructions']))
 '''for value in new_tweet['timeline_v2'].values():
     print(value)
     print("\n\n")'''
@@ -115,3 +126,4 @@ print(len(new_tweet['timeline_v2']['timeline']['instructions']))
 
 #print(account.home_latest_timeline(1))
 
+getTweetInfo()
