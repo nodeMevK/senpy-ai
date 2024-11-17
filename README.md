@@ -28,6 +28,8 @@
 
     9. CLEAN UP, check for specific entry types to avoid error 
 
+    10. Cleaned up a little but need to sort error and try, except statement 
+
 
 
 
