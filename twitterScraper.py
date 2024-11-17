@@ -30,6 +30,36 @@ def getTweetText(tweet):
     text = tweet[0]['data']['user']['result']
     return text
 
+def getTweetInfo():
+    '''res = {
+        "handle": "",
+        "tweet": "",
+        "tweet_id": "",
+        "timestamp": ""
+    }'''
+
+    res_arr = []
+
+    for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
+        res = {
+            "handle": "",
+            "tweet": "",
+            "tweet_id": "",
+            "timestamp": ""
+        }
+
+        try:
+            #print(type(entry))
+            print(entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
+
+            #res["tweet"] = entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text']
+            #res_arr.append(res)
+        except KeyError as e:
+            print(e)
+            continue
+    return res_arr
+    
+
 cookies = {
     "ct0": os.getenv("TWIT_COOKIE"),
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
@@ -44,12 +74,10 @@ scraper = Scraper(cookies=cookies)
 '''tg = scraper.users(['notthreadguy'])
 print(tg)'''
 
-#print(getTweets("notthreadguy"))
-#print(getUserId("notthreadguy"))
-#print(getUserId(""))
 
-tweets = scraper.tweets([1426732252768182281],limit=10)
-#print(tweets)
+
+tweets = scraper.tweets([1426732252768182281],limit=100)
+
 '''print("this is df")
 print("\n\n")
 
@@ -64,7 +92,6 @@ new_tweet = getTweetText(tweets)
 '''print("this is new_tweet")
 print(new_tweet)'''
 
-print(len(tweets[0]))
 
 #print(tweets[0])
 
