@@ -57,6 +57,9 @@ def getTweetInfo():
                 print(str(num) + ": " + entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
                 num += 1
 
+                ''' At this point need to get other data in legacy as well '''
+                ''' maybe some dictionary comprehension or add straight to a db '''
+
             else:
 
                 # TODO
@@ -87,7 +90,8 @@ print(tg)'''
 
 
 
-tweets = scraper.tweets([1426732252768182281],limit=100)
+#tweets = scraper.tweets([1426732252768182281],limit=100)
+tweets = scraper.tweets([1426732252768182281])
 
 '''print("this is df")
 print("\n\n")
