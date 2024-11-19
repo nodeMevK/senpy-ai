@@ -23,7 +23,6 @@ def organizeTweetData(tweets):
     df = pd.json_normalize(tweets[0])
     return df
 
-
 def getUserId2(username):
     result = scraper.users([username])
 
@@ -46,7 +45,8 @@ def getTweetInfo():
 
     for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
         res = {
-            "handle": "",
+            "user_name": "",
+            "name": "",
             "tweet": "",
             "tweet_id": "",
             "timestamp": ""
@@ -54,19 +54,27 @@ def getTweetInfo():
         try:
             #print(type(entry))
             if (entry['entryId'][:5] == "tweet"):
-                print(str(num) + ": " + entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
-                num += 1
+                #print(str(num) + ": " + entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
+                #num += 1
 
                 ''' At this point need to get other data in legacy as well '''
                 ''' maybe some dictionary comprehension or add straight to a db '''
+
+                legacy = entry['content']['itemContent']['tweet_results']['result']['legacy']
+                res["user_name"] = legacy["screen_name"]
+                res["name"] = legacy["name"]
+                res["tweet"] = legacy["full_text"]
+                res["tweet_id"] = legacy["id_str"]
+                res["timestamp"] = legacy["created_at"]
+
+                res_arr.append(res)
+                print(f"{res}")
 
             else:
 
                 # TODO
 
                 print("either a reply or something else .. ")
-            #res["tweet"] = entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text']
-            #res_arr.append(res)
         except KeyError as e:
             print(e)
             continue
@@ -79,55 +87,14 @@ cookies = {
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
 }
 
-'''scraper = Scraper(cookies=)'''
-
-
 #account = Account(cookies=cookies)
 scraper = Scraper(cookies=cookies)
 
-'''tg = scraper.users(['notthreadguy'])
-print(tg)'''
-
-
 
 #tweets = scraper.tweets([1426732252768182281],limit=100)
-tweets = scraper.tweets([1426732252768182281])
-
-'''print("this is df")
-print("\n\n")
-
-newDf = organizeTweetData(tweets).head()'''
-'''newDf.to_csv('myDataFrame.csv')
-
-
-print("this is rest_id")
-print(newDf['rest_id'])'''
+tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
+#print(tweets)
 
 new_tweet = getTweetText(tweets)
-'''print("this is new_tweet")
-print(new_tweet)'''
-
-
-#print(tweets[0])
-
-
-'''for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
-    print(type(entry))
-    print(entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
-    #for _ in len(entry):
-        #print(content['itemContent']['tweet_results']['result']['legacy']['full_text'])
-    #print(entry)
-    #print("\n\n\n\n")'''
-    
-
-#print(len(new_tweet['timeline_v2']['timeline']['instructions']))
-'''for value in new_tweet['timeline_v2'].values():
-    print(value)
-    print("\n\n")'''
-
-'''with open('tweetData.txt', 'w') as file:
-    json.dump(new_tweet, file) '''  
-
-#print(account.home_latest_timeline(1))
 
 getTweetInfo()
