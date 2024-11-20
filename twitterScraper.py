@@ -5,7 +5,6 @@ from twitter.account import Account
 import os
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
-import json
 
 load_dotenv(find_dotenv())
 
@@ -15,6 +14,7 @@ def getUserId(username):
     return result[0]['data']['user']['result']['rest_id']
 
 def getTweets(id):
+    '''get a list of tweets from a user'''
     result = scraper.tweets(id)
     return result
 
@@ -28,20 +28,12 @@ def getUserId2(username):
 
 
 def getTweetText(tweet):
+    '''get '''
     text = tweet[0]['data']['user']['result']
     return text
 
 def getTweetInfo():
-    '''res = {
-        "handle": "",
-        "tweet": "",
-        "tweet_id": "",
-        "timestamp": ""
-    }'''
-
     res_arr = []
-
-    num = 1
 
     for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
         res = {
@@ -52,11 +44,8 @@ def getTweetInfo():
             "timestamp": ""
         }
         try:
-            #print(type(entry))
             if (entry['entryId'][:5] == "tweet"):
-                #print(str(num) + ": " + entry['content']['itemContent']['tweet_results']['result']['legacy']['full_text'])
-                #num += 1
-
+               
                 ''' At this point need to get other data in legacy as well '''
                 ''' maybe some dictionary comprehension or add straight to a db '''
                 entry_result = entry['content']['itemContent']['tweet_results']['result']
@@ -73,9 +62,7 @@ def getTweetInfo():
                 res["timestamp"] = legacy["created_at"]
 
                 res_arr.append(res)
-                #[print(f"{key}: {value}") for key, value in res.items()]
-                #print("\n")
-
+             
             else:
 
                 # TODO
@@ -84,6 +71,7 @@ def getTweetInfo():
         except KeyError as e:
             print(e)
             continue
+
     return res_arr
     
 
@@ -96,13 +84,14 @@ cookies = {
 scraper = Scraper(cookies=cookies)
 
 
-tweets = scraper.tweets([1426732252768182281],limit=10)
-#tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
+#tweets = scraper.tweets([1426732252768182281],limit=10)
+
+tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
 #print(tweets)
 
 new_tweet = getTweetText(tweets)
 
 final = getTweetInfo()
-
+print(len(final))
 for section in final:
     print(section)
