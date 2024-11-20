@@ -59,16 +59,22 @@ def getTweetInfo():
 
                 ''' At this point need to get other data in legacy as well '''
                 ''' maybe some dictionary comprehension or add straight to a db '''
+                entry_result = entry['content']['itemContent']['tweet_results']['result']
+                legacy = entry_result['legacy']
+                core = entry_result['core']
 
-                legacy = entry['content']['itemContent']['tweet_results']['result']['legacy']
-                res["user_name"] = legacy["screen_name"]
-                res["name"] = legacy["name"]
+
+                ''' user info is in core layer '''
+                res["user_name"] = core["user_results"]["result"]["legacy"]["screen_name"]
+                res["name"] = core["user_results"]["result"]["legacy"]["name"]
+
                 res["tweet"] = legacy["full_text"]
                 res["tweet_id"] = legacy["id_str"]
                 res["timestamp"] = legacy["created_at"]
 
                 res_arr.append(res)
-                print(f"{res}")
+                #[print(f"{key}: {value}") for key, value in res.items()]
+                #print("\n")
 
             else:
 
@@ -78,7 +84,6 @@ def getTweetInfo():
         except KeyError as e:
             print(e)
             continue
-                    
     return res_arr
     
 
@@ -91,10 +96,13 @@ cookies = {
 scraper = Scraper(cookies=cookies)
 
 
-#tweets = scraper.tweets([1426732252768182281],limit=100)
-tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
+tweets = scraper.tweets([1426732252768182281],limit=10)
+#tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
 #print(tweets)
 
 new_tweet = getTweetText(tweets)
 
-getTweetInfo()
+final = getTweetInfo()
+
+for section in final:
+    print(section)
