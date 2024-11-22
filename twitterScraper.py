@@ -1,8 +1,8 @@
 from twitter.scraper import Scraper
 from twitter.util import init_session 
 from twitter.account import Account
-
 import os
+import json
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
 
@@ -32,10 +32,10 @@ def getTweetText(tweet):
     text = tweet[0]['data']['user']['result']
     return text
 
-def getTweetInfo():
+def getTweetInfo(tweetList):
     res_arr = []
 
-    for entry in new_tweet['timeline_v2']['timeline']['instructions'][2]['entries']:
+    for entry in tweetList['timeline_v2']['timeline']['instructions'][2]['entries']:
         res = {
             "user_name": "",
             "name": "",
@@ -80,18 +80,17 @@ cookies = {
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
 }
 
-#account = Account(cookies=cookies)
 scraper = Scraper(cookies=cookies)
 
 
-#tweets = scraper.tweets([1426732252768182281],limit=10)
-
 tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
-#print(tweets)
-
 new_tweet = getTweetText(tweets)
 
-final = getTweetInfo()
+with open('tweetData.txt', 'w') as file:
+    json.dump(new_tweet, file)
+
+
+final = getTweetInfo(new_tweet)
 print(len(final))
 for section in final:
     print(section)
