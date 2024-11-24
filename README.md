@@ -4,6 +4,7 @@
     3. `pip install ollama`
     4. `pip install twitter-api-client`
     5. `pip install pandas`
+    6. `pip install Flask-SQLAlchemy`
 
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
