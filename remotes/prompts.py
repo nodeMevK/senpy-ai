@@ -1,9 +1,9 @@
-def get_an_idea_prompt(tweets_data, context):
+def whats_hot_prompt(tweets_data, context):
 
     template = """
         Analyze the following posts and text
 
-        
+
         {tweets}
         {text}
     """
