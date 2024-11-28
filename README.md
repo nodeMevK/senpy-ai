@@ -34,6 +34,8 @@
     11. need to relax with requets being made, getting data ready for pandas df
 
     12. Need to make models for db and finish setting up, postgres is already downloaded on the PC
+
+    13. Need to get back asap
     
 
 
