@@ -39,6 +39,7 @@
 
     14. Want to look into voice capabilities and things of that nature
     
+    15. Need to check setup db and work on peresonality, will do that later tonight 
 
 
 
