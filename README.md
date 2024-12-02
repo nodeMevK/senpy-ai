@@ -43,6 +43,8 @@
 
     16. Need to come up with more specific reason for ai, was thinking an ai with a sole purpose to get a response from elon musk
 
+    lo mismo 
+
 
 
 
