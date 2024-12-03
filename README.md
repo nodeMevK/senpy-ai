@@ -45,6 +45,8 @@
 
     lo mismo 
 
+    17. update psql on mac 
+
 
 
 
