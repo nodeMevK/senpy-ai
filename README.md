@@ -5,6 +5,7 @@
     4. `pip install twitter-api-client`
     5. `pip install pandas`
     6. `pip install Flask-SQLAlchemy`
+    7. `pip install psycopg2 `
 
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
@@ -46,6 +47,8 @@
     lo mismo 
 
     17. update psql on mac 
+
+    18. need to start implementing db and install psycopg2
 
 
 
