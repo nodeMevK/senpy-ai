@@ -50,6 +50,8 @@
 
     18. need to start implementing db and install psycopg2
 
+    19. Finish Models and then start seeding DB
+
 
 
 
