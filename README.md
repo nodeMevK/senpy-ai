@@ -52,6 +52,7 @@
 
     19. Finish Models and then start seeding DB
 
+    20. Try twitter.accounts alongside scraper to get more tweets, pretty sure scraper just isnt that good
 
 
 
