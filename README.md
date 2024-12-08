@@ -54,6 +54,8 @@
 
     20. Try twitter.accounts alongside scraper to get more tweets, pretty sure scraper just isnt that good
 
+    21. Ehh yk why im here fr 
+
 
 
 
