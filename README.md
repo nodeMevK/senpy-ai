@@ -62,6 +62,8 @@
 
     24. need to clean up some files (or delete)
 
+    25. start updating character files as well
+
 
 
 
