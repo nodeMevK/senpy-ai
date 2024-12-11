@@ -3,4 +3,8 @@ import numpy as np
 def getLongTermMemory():
     return
 
-def 
+def formatMemory():
+    return
+
+def storeMemory():
+    return
