@@ -58,6 +58,8 @@
 
     22. Adding some very important things here seriously 
 
+    23. Added some more files for database and memory, need to make sure i can connect to db next time around (connect as in can create the initial db programmitcally)
+
 
 
 
