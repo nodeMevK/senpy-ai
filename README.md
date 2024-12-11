@@ -14,7 +14,7 @@
 
     1. will try again with playwright
 
-    2. need to figure out ratelimit for twitter
+    2. ~~need to figure out ratelimit for twitter~~
 
     3. with ollama implementation, not sure if i still have to download the llama model as well
 
@@ -26,7 +26,7 @@
 
     7. ~~need to sort thru response~~
 
-    8. got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays
+    8. ~~got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays~~
 
     9. CLEAN UP, check for specific entry types to avoid error 
 
