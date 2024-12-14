@@ -40,7 +40,7 @@
 
     14. Want to look into voice capabilities and things of that nature
     
-    15. Need to check setup db and work on peresonality, will do that later tonight 
+    15. ~~Need to check setup db and work on peresonality, will do that later tonight~~ 
 
     16. Need to come up with more specific reason for ai, was thinking an ai with a sole purpose to get a response from elon musk
 
