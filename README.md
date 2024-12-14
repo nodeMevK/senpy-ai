@@ -64,6 +64,8 @@
 
     25. start updating character files as well
 
+    26. Updating character files now 
+
 
 
 
