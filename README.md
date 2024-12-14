@@ -36,7 +36,7 @@
 
     12. Need to make models for db and finish setting up, postgres is already downloaded on the PC
 
-    13. Need to get back asap
+    13. ~~Need to get back asap~~
 
     14. Want to look into voice capabilities and things of that nature
     
