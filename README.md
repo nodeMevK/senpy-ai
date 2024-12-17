@@ -52,7 +52,7 @@
 
     17. update psql on mac 
 
-    18. need to start implementing db and install psycopg2
+    18. ~~need to start implementing db and install psycopg2~~
 
     19. Finish Models and then start seeding DB
 
