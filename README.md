@@ -10,15 +10,17 @@
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
 
-3. Psql Version
+3. Psql Version: 
 
-4. **TODO** 
+4. Llama Version:
+
+5. **TODO** 
 
     1. ~~will try again with playwright~~
 
     2. ~~need to figure out ratelimit for twitter~~
 
-    3. with ollama implementation, not sure if i still have to download the llama model as well
+    3. ~~with ollama implementation, not sure if i still have to download the llama model as well~~
 
     4. ~~ollama already installed~~
 
