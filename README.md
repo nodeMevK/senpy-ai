@@ -68,6 +68,8 @@
 
     Take my shirt off now the hoes stop breathing 
 
+    27. Get db versions in place
+
 
 
 
