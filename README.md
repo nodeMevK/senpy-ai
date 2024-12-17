@@ -10,7 +10,9 @@
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
 
-3. **TODO** 
+3. Psql Version
+
+4. **TODO** 
 
     1. ~~will try again with playwright~~
 
