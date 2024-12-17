@@ -11,5 +11,5 @@ response = ollama.chat(model='llama3.2', messages=[
 
 ])
 
-
+print("finished rendering")
 print(response['message']['content'])
