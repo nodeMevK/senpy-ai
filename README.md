@@ -12,7 +12,7 @@
 
 3. **TODO** 
 
-    1. will try again with playwright
+    1. ~~will try again with playwright~~
 
     2. ~~need to figure out ratelimit for twitter~~
 
@@ -28,9 +28,9 @@
 
     8. ~~got to inner part of tweet  had to change approach slightly because dictionaries were nested with arrays~~
 
-    9. CLEAN UP, check for specific entry types to avoid error 
+    9. ~~CLEAN UP, check for specific entry types to avoid error~~ 
 
-    10. Cleaned up a little but need to sort error and try, except statement 
+    10. ~~Cleaned up a little but need to sort error and try, except statement~~
 
     11.~~need to relax with requets being made, getting data ready for pandas df~~
 
