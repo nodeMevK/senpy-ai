@@ -74,7 +74,4 @@
 
     27. Get db versions in place
 
-
-
-
-
+    28. Having issues getting into db on mac 
