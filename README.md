@@ -75,3 +75,7 @@
     27. Get db versions in place
 
     28. Having issues getting into db on mac 
+
+    29. Use this link for ref
+        - `https://stackoverflow.com/questions/69754628/psql-error-connection-to-server-on-socket-tmp-s-pgsql-5432-failed-no-such`
+        - `brew services start postgresql@version`
