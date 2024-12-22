@@ -16,7 +16,10 @@
 
 4. Llama Version:
 
-5. **TODO** 
+5. Docker:
+    - setup docker soon
+
+6. **TODO** 
 
     1. ~~will try again with playwright~~
 
