@@ -38,9 +38,9 @@
 
     10. ~~Cleaned up a little but need to sort error and try, except statement~~
 
-    11.~~need to relax with requets being made, getting data ready for pandas df~~
+    11. ~~need to relax with requets being made, getting data ready for pandas df~~
 
-    12. Need to make models for db and finish setting up, postgres is already downloaded on the PC
+    12. ~~Need to make models for db and finish setting up, postgres is already downloaded on the PC~~
 
     13. ~~Need to get back asap~~
 
@@ -56,7 +56,7 @@
 
     18. ~~need to start implementing db and install psycopg2~~
 
-    19. Finish Models and then start seeding DB
+    19. ~~Finish Models and then start seeding DB~~
 
     20. Try twitter.accounts alongside scraper to get more tweets, pretty sure scraper just isnt that good
 
@@ -66,7 +66,7 @@
 
     23. Added some more files for database and memory, need to make sure i can connect to db next time around (connect as in can create the initial db programmitcally)
 
-    24. need to clean up some files (or delete)
+    24. ~~need to clean up some files (or delete)~~
 
     25. start updating character files as well
 
