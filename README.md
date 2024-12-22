@@ -11,7 +11,8 @@
 2. Download Ollama for your machine `https://ollama.com/download`
     - `ollama run {model}` to download and run model
 
-3. Psql Version: 
+3. Psql Version: 16.4
+    - `psql -U postgres`
 
 4. Llama Version:
 
