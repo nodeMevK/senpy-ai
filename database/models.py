@@ -22,10 +22,19 @@ class User(Base):
 class Tweets(Base):
     __tablename__ = "tweets_from_user_scrape"
     id = Column(Integer, primary_key=True)
+    username = Column()
+    tweet = Column()
+    tweet_id = Column()
+    time_stamp = Column()
+
 
 
 class TimeLineTweets(Base):
     __tablename__ = "time_line_tweets"
     id = Column(Integer, primary_key=True)
+    username = Column()
+    tweet = Column()
+    tweet_id = Column()
+    time_stamp = Column()
 
 
