@@ -17,24 +17,26 @@ class LongMemory(Base):
 class User(Base):
     __tablename__ = "user"
     id = Column(Integer, primary_key=True)
+    username = Column(String)
+    user_id = Column(Integer)
 
 
 class Tweets(Base):
     __tablename__ = "tweets_from_user_scrape"
     id = Column(Integer, primary_key=True)
-    username = Column()
-    tweet = Column()
-    tweet_id = Column()
-    time_stamp = Column()
+    username = Column(String)
+    tweet = Column(String)
+    tweet_id = Column(Integer)
+    time_stamp = Column(DateTime(timezone=True))
 
 
 
 class TimeLineTweets(Base):
     __tablename__ = "time_line_tweets"
     id = Column(Integer, primary_key=True)
-    username = Column()
-    tweet = Column()
-    tweet_id = Column()
-    time_stamp = Column()
+    username = Column(String)
+    tweet = Column(String)
+    tweet_id = Column(Integer)
+    time_stamp = Column(DateTime(timezone=True))
 
 
