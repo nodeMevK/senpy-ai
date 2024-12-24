@@ -86,3 +86,5 @@
         - `brew services start postgresql@version`
     
     30. Data is successfully being pushed to db and db is setup
+
+    31. Need to start messing with the prompts
