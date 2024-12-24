@@ -24,7 +24,7 @@ def respond_to_tweet(tweets_data, context):
 
     return template.format(tweets=tweets_data, text=context)
 
-def respond_aggresively_to_tweet():
+def respond_aggresively_to_tweet(tweets_data, context):
     template = """
         Analyze the following posts and text
 
