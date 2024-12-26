@@ -88,3 +88,5 @@
     30. Data is successfully being pushed to db and db is setup
 
     31. Need to start messing with the prompts
+
+    32. Work on characters asap
