@@ -90,3 +90,5 @@
     31. Need to start messing with the prompts
 
     32. Work on characters asap
+
+    33. quick dink 
