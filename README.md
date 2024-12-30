@@ -96,3 +96,5 @@
     34. Honestly just been chilling after christmas but tomorrow im back i promise 
 
     35. Begin pushing data constantly to db
+
+    36. get docker going as well
