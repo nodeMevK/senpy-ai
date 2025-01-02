@@ -1,15 +1,24 @@
 def whats_hot_prompt(tweets_data, context):
 
     template = """
-        Analyze the following posts and text
+        Analyze the following {posts} and text. 
 
-        {tweets}
+        Using the information, render a concise internal monologue about the current posts
+        and their relevance to update your priors.
+
+        Focus on trends, metas, key themes, and potential areas of interest. 
+
+        Try to find the next meta brewing. 
+
+        Most importantly, focus on the posts that were given to you. 
+
+        External content:
         {text}
 
 
     """
 
-    return template.format(tweets=tweets_data, text=context)
+    return template.format(psots=tweets_data, text=context)
 
 
 def respond_to_tweet(tweets_data, context):
