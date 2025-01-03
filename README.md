@@ -100,3 +100,5 @@
     36. get docker going as well
 
     37. Getting docker ready to go 
+
+    38. Make sure model handles responses well in next update
