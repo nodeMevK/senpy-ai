@@ -98,3 +98,5 @@
     35. Begin pushing data constantly to db
 
     36. get docker going as well
+
+    37. Getting docker ready to go 
