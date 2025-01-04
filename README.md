@@ -102,3 +102,5 @@
     37. Getting docker ready to go 
 
     38. Make sure model handles responses well in next update
+
+    39.  Need to test llama with new characters and prompts
