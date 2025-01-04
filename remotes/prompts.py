@@ -1,4 +1,6 @@
-def whats_hot_prompt(tweets_data, context):
+from characters import ch1
+
+def whats_hot_prompt(tweets_data, context, personality):
 
     template = """
         Analyze the following {posts} and text. 
@@ -14,6 +16,11 @@ def whats_hot_prompt(tweets_data, context):
 
         External content:
         {text}
+
+        Also, stay true to your lore and character
+
+        Character:
+        {personality}
 
 
     """
