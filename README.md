@@ -104,3 +104,5 @@
     38. Make sure model handles responses well in next update
 
     39.  Need to test llama with new characters and prompts
+
+    40. Swarm tech J(AI)NE ST
