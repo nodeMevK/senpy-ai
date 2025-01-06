@@ -13,6 +13,7 @@ print("running ")
 
 ])'''
 
+#print(prompts.whats_hot_prompt(prompts.get_example_tweets(), "", ch1.narcissist))
 
 response = ollama.chat(model='llama3.2', messages=[
     
