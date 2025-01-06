@@ -23,7 +23,7 @@ def whats_hot_prompt(tweets_data, context, personality):
 
     """
 
-    return template.format(psots=tweets_data, text=context)
+    return template.format(posts=tweets_data, text=context)
 
 
 def respond_to_tweet(tweets_data, context, personality):
