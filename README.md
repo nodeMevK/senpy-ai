@@ -107,3 +107,6 @@
     39.  Need to test llama with new characters and prompts
 
     40. Swarm tech J(AI)NE ST
+
+    41. Got llama working with prompts
+        - need to organize data before going any further tbh
