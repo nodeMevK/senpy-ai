@@ -107,3 +107,5 @@
     39.  Need to test llama with new characters and prompts
 
     40. Swarm tech J(AI)NE ST
+
+    41. Quick push nothing yet really
