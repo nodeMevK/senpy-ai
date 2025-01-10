@@ -108,4 +108,7 @@
 
     40. Swarm tech J(AI)NE ST
 
-    41. Quick push nothing yet really
+    41. Got llama working with prompts
+        - need to organize data before going any further tbh
+
+    42. Quick push nothing yet really
