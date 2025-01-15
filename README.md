@@ -118,3 +118,5 @@
     44. J(AI)NE or Senp(ai)
 
     45. Tbh have more ideas for this but thinking of different things to integrate
+
+    46. Thinking of integrating token scanner to get data and things of that nature
