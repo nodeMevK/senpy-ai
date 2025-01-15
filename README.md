@@ -116,3 +116,5 @@
     47. Need to clean up other parts of repo
 
     48. Look into hallucination yeild
+
+    49. Need to set up pipeline now tbh and organize db - look into vector dbs
