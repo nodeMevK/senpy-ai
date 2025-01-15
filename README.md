@@ -114,3 +114,5 @@
     46. Thinking of integrating token scanner to get data and things of that nature
 
     47. Need to clean up other parts of repo
+
+    48. Look into hallucination yeild
