@@ -120,3 +120,5 @@
     49. Need to set up pipeline now tbh and organize db - look into vector dbs
 
     50. Also check back to creating custom models on `https://ollama.com/blog/python-javascript-libraries`
+
+    51. important link: `https://github.com/ollama/ollama-python/tree/main/examples`
