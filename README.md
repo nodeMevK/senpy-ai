@@ -90,11 +90,7 @@
 
     31. Need to start messing with the prompts
 
-    32. Work on characters asap
-
-    33. quick dink 
-
-    34. Honestly just been chilling after christmas but tomorrow im back i promise 
+    32. ~~Work on characters asap~~
 
     35. Begin pushing data constantly to db
 
