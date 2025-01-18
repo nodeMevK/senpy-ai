@@ -131,3 +131,5 @@
     54. Going to start turning some files into classes to clean up and get ready for prod { scraper, agent, etc }
 
     55. Just some more links `https://www.geeksforgeeks.org/python-yield-keyword/`
+
+    56. ML Learning link (really start studying these) `https://www.geeksforgeeks.org/machine-learning/?ref=outind`
