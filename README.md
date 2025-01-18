@@ -122,3 +122,5 @@
     50. Also check back to creating custom models on `https://ollama.com/blog/python-javascript-libraries`
 
     51. important link: `https://github.com/ollama/ollama-python/tree/main/examples`
+
+    52. Trying to update communication with ollama
