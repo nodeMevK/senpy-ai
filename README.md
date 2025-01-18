@@ -124,3 +124,5 @@
     51. important link: `https://github.com/ollama/ollama-python/tree/main/examples`
 
     52. Trying to update communication with ollama
+
+    53. Something is up with ollama.create() - others on github are having the same issue
