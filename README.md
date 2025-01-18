@@ -126,3 +126,4 @@
     52. Trying to update communication with ollama
 
     53. Something is up with ollama.create() - others on github are having the same issue
+        - `https://github.com/ollama/ollama-python/issues/371`
