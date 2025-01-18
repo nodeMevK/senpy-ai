@@ -127,3 +127,5 @@
 
     53. Something is up with ollama.create() - others on github are having the same issue
         - `https://github.com/ollama/ollama-python/issues/371`
+
+    54. Going to start turning some files into classes to clean up and get ready for prod { scraper, agent, etc }
