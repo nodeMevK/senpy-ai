@@ -6,9 +6,7 @@ from characters import ch1
 '''response = embed(model='llama3.2', input='Hello, world!')
 print(response['embeddings']) '''
 
-ollama.create(model='example', modelfile=ch1.test_model)
-
-
+'''ollama.create(model='example', modelfile=ch1.test_model)
 
 response = ollama.chat(model='llama3.2', messages=[
     
@@ -19,6 +17,16 @@ response = ollama.chat(model='llama3.2', messages=[
     #'content': prompts.whats_hot_prompt(prompts.get_example_tweets(), "", ch1.skizo)
   },
 
-])
+])'''
 
-print(response["message"]['content'])
+
+llm = ollama.create(
+  model="a_generic_model_name",
+  from_="llama3.2",
+  parameters={"seed": 42, "temperature": 0},
+  system="You are super mario"
+)
+print(llm.status)
+#print(response["message"]['content'])
+
+
