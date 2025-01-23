@@ -14,31 +14,32 @@ class gScraper:
         self.scraper = Scraper(cookies=_cookies)
         pass
 
-    def getUserId(username):
+    def getUserId(self, username):
         ''' get id of twitter user '''
-        result = scraper.users([username])
-        return result[0]['data']['user']['result']['rest_id']
+        result = self.scraper.users([username])
+        return result[0]
+        #return result[0]['data']['user']['result']['rest_id']
 
-    def getTweets(id):
+    def getTweets(self, id):
         '''get a list of tweets from a user'''
-        result = scraper.tweets(id)
+        result = self.scraper.tweets(id)
         return result
 
-    def organizeTweetData(tweets):
+    def organizeTweetData(self, tweets):
         ''' Organize tweets into a pandas dataframe '''
         df = pd.json_normalize(tweets[0])
         return df
 
-    def getUserId2(username):
-        result = scraper.users([username])
+    def getUserId2(self, username):
+        result = self.scraper.users([username])
 
 
-    def getTweetText(tweet):
+    def getTweetText(self, tweet):
         '''get '''
         text = tweet[0]['data']['user']['result']
         return text
 
-    def getTweetInfo(tweetList):
+    def getTweetInfo(self, tweetList):
         res_arr = []
 
         for entry in tweetList['timeline_v2']['timeline']['instructions'][2]['entries']:
@@ -86,7 +87,17 @@ cookies = {
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
 }
 
-scraper = Scraper(cookies=cookies)
+#scraper = Scraper(cookies=cookies)
+
+myScraper = gScraper(cookies)
+userId = myScraper.getUserId("notthreadguy")
+print(userId)
+'''tweets = myScraper.scraper.tweets([myScraper.getUserId("notthreadguy")], limit=10)
+tweet = myScraper.getTweetText
+
+final = myScraper.getTweetInfo(tweet)
+for section in final:
+    print(section)'''
 
 '''tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
 new_tweet = getTweetText(tweets)
