@@ -1,5 +1,5 @@
 #from ollama import embed
-import ollama
+#from ollama import Client
 from remotes import prompts
 from characters import ch1 
 
@@ -20,13 +20,46 @@ response = ollama.chat(model='llama3.2', messages=[
 ])'''
 
 
-llm = ollama.create(
-  model="a_generic_model_name",
-  from_="llama3.2",
-  parameters={"seed": 42, "temperature": 0},
-  system="You are super mario"
-)
-print(llm.status)
-#print(response["message"]['content'])
+import ollama
+
+
+'''example = ollama.create(
+    model='example', 
+    from_='llama3.2', 
+    system="You are Mario from Super Mario Bros.")
+
+
+print(example)
+print(example.status)'''
+
+
+response = ollama.chat(model='example', messages=[
+    
+  {
+    'role': 'user',
+    #'content': 'Why is the sky blue?',
+    'content': 'who are you?'
+    #'content': prompts.whats_hot_prompt(prompts.get_example_tweets(), "", ch1.skizo)
+  },
+
+])
+
+
+
+'''example = Client().create(
+    model='persona', 
+    from_='llama3.2',
+    parameters={"seed": 42, "temperature": 0},    
+    system='You are Mario from Super Mario Bros.',
+    stream=False,
+    )
+
+print(example.status)'''
+
+
+
+
+
+print(response["message"]['content'])
 
 
