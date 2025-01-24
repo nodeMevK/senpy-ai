@@ -23,14 +23,16 @@ response = ollama.chat(model='llama3.2', messages=[
 import ollama
 
 
-'''example = ollama.create(
+example = ollama.create(
     model='example', 
     from_='llama3.2', 
-    system="You are Mario from Super Mario Bros.")
+    #system="You are Mario from Super Mario Bros."
+    system=ch1.skizo
+)
 
 
-print(example)
-print(example.status)'''
+#print(example)
+print(example.status)
 
 
 response = ollama.chat(model='example', messages=[
