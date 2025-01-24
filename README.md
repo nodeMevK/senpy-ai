@@ -143,3 +143,5 @@
     59. have to update prompts for new class structure
 
     60. Classes and tests are working properly as of now - have to update cookies and clean up scraper class more still
+
+    61. Start diagramming agent architecture
