@@ -21,7 +21,21 @@ class TwitterAgent:
                 'content': prompt
             },
         ])
-        pass
+        return response['message']['content']
+        
+
+    def generateStreamResponse(self, prompt):
+        messages = [
+            {
+                'role': 'user',
+                'content': prompt,
+            },
+        ]
+
+        for part in ollama.chat('agent', messages=messages, stream=True):
+            print(part['message']['content'], end='', flush=True)
+
+        
 
     def calculateUserScore(self, users):
         pass
