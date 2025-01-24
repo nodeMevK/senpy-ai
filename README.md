@@ -141,3 +141,5 @@
     58. Mans on COD taking a little break innit
 
     59. have to update prompts for new class structure
+
+    60. Classes and tests are working properly as of now - have to update cookies and clean up scraper class more still
