@@ -1,9 +1,15 @@
 import ollama
 
+''' 
+    on final version have to change all instances of example back to agent. 
+    only using example now to save space
+    
+'''
+
 class TwitterAgent:
     def __init__(self, system_prompt: str):
         self.system = ollama.create(
-            model='agent', 
+            model='example', 
             from_='llama3.2',
             parameters={"seed": 42, "temperature": 0},    
             system=system_prompt,
@@ -13,7 +19,7 @@ class TwitterAgent:
         pass
 
     def generateResponse(self, prompt):
-        response = ollama.chat(model='agent', messages=[
+        response = ollama.chat(model='example', messages=[
             {
                 'role': 'user',
                 #'content': 'Why is the sky blue?',
@@ -32,7 +38,7 @@ class TwitterAgent:
             },
         ]
 
-        for part in ollama.chat('agent', messages=messages, stream=True):
+        for part in ollama.chat('example', messages=messages, stream=True):
             print(part['message']['content'], end='', flush=True)
 
         
