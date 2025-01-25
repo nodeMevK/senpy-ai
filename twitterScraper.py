@@ -8,7 +8,7 @@ import pandas as pd
 
 load_dotenv(find_dotenv())
 
-class gScraper:
+class GScraper:
 
     def __init__(self, _cookies):
         self.scraper = Scraper(cookies=_cookies)
