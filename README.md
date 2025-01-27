@@ -73,9 +73,9 @@
 
     24. ~~need to clean up some files (or delete)~~
 
-    25. start updating character files as well
+    25. ~~start updating character files as well~~
 
-    26. Updating character files now 
+    26. ~~Updating character files now~~
 
     Take my shirt off now the hoes stop breathing 
 
@@ -88,9 +88,9 @@
         - `brew services start postgresql@version`
         - `brew services stop postgresql@version`
     
-    30. Data is successfully being pushed to db and db is setup
+    30. ~~Data is successfully being pushed to db and db is setup~~
 
-    31. Need to start messing with the prompts
+    31. ~~Need to start messing with the prompts~~
 
     32. ~~Work on characters asap~~
 
