@@ -155,3 +155,8 @@
     65. Also start thinking of other sources of data for agent
 
     66. ~~mac environment set up~~
+
+    67. Making very good progress with model accessibility. Maybe will make it in a way in the class 
+        to chose the model upon creating the object instead of passing it as an argument
+
+    68. Can probably clean up class as well but will do that later for sure
