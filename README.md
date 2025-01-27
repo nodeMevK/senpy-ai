@@ -100,18 +100,18 @@
 
     37. Getting docker ready to go 
 
-    38. Make sure model handles responses well in next update
+    38. ~~Make sure model handles responses well in next update~~
 
     39.  Need to test llama with new characters and prompts
 
     40. Swarm tech J(AI)NE ST
 
-    41. Got llama working with prompts
+    41. ~~Got llama working with prompts~~
         - need to organize data before going any further tbh
 
     44. J(AI)NE or Senp(ai)
 
-    45. Tbh have more ideas for this but thinking of different things to integrate
+    45. ~~Tbh have more ideas for this but thinking of different things to integrate~~
 
     46. Thinking of integrating token scanner to get data and things of that nature
 
@@ -130,7 +130,7 @@
     53. Something is up with ollama.create() - others on github are having the same issue
         - `https://github.com/ollama/ollama-python/issues/371`
 
-    54. Going to start turning some files into classes to clean up and get ready for prod { scraper, agent, etc }
+    54. ~~Going to start turning some files into classes to clean up and get ready for prod { scraper, agent, etc }~~
 
     55. Just some more links `https://www.geeksforgeeks.org/python-yield-keyword/`
 
