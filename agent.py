@@ -7,10 +7,14 @@ import ollama
 '''
 
 class TwitterAgent:
-    def __init__(self, system_prompt: str, model: str):
+    def __init__(
+            self, system_prompt: str,
+            model_name: str, 
+            llm:str 
+            ):
         self.system = ollama.create(
-            model=model, 
-            from_='llama3.2',
+            model=model_name, 
+            from_=llm,
             parameters={"seed": 42, "temperature": 0},    
             system=system_prompt,
             stream=False,
