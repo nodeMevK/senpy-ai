@@ -138,9 +138,9 @@
 
     57. Going to add more in a few just needed a commit
 
-    58. Mans on COD taking a little break innit
+    58. ~~Mans on COD taking a little break innit~~
 
-    59. have to update prompts for new class structure
+    59. ~~have to update prompts for new class structure~~
 
     60. Classes and tests are working properly as of now - have to update cookies and clean up scraper class more still
 
@@ -148,7 +148,7 @@
 
     62. Looking into formatting responses: length, format, things of that nature
 
-    63. Going to set up deepseek tomorrow should be fire
+    63. ~~Going to set up deepseek tomorrow should be fire~~
 
     64. Still need to look into response formatting
 
