@@ -9,16 +9,18 @@ import ollama
 class TwitterAgent:
     def __init__(
             self, system_prompt: str,
-            model_name: str, 
+            _model_name: str, 
             llm:str 
             ):
         self.system = ollama.create(
-            model=model_name, 
+            model=_model_name, 
             from_=llm,
             parameters={"seed": 42, "temperature": 0},    
             system=system_prompt,
             stream=False,
         )
+
+        self.modelName = _model_name
 
         pass
 
@@ -34,7 +36,7 @@ class TwitterAgent:
         return response['message']['content']
         
 
-    def generateStreamResponse(self, prompt: str, model: str):
+    def generateStreamResponse(self, prompt: str):
         messages = [
             {
                 'role': 'user',
@@ -42,7 +44,7 @@ class TwitterAgent:
             },
         ]
 
-        for part in ollama.chat(model, messages=messages, stream=True):
+        for part in ollama.chat(self.modelName, messages=messages, stream=True):
             print(part['message']['content'], end='', flush=True)
 
         
