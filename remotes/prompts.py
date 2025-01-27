@@ -51,7 +51,9 @@ def whats_hot_prompt(tweets_data, context, personality):
 
 def respond_to_tweet(tweets_data, context, personality):
     template = """
-        Analyze the following posts and text
+        Analyze the following tweet
+
+        Upon analyzing the tweet, think of the best suited response.  
 
         {tweets}
         {text}
