@@ -147,3 +147,7 @@
     61. Start diagramming agent architecture
 
     62. Looking into formatting responses: length, format, things of that nature
+
+    63. Going to set up deepseek tomorrow should be fire
+
+    
