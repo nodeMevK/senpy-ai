@@ -154,4 +154,4 @@
 
     65. Also start thinking of other sources of data for agent
 
-    66. mac environment set up
+    66. ~~mac environment set up~~
