@@ -151,3 +151,5 @@
     63. Going to set up deepseek tomorrow should be fire
 
     64. Still need to look into response formatting
+
+    65. Also start thinking of other sources of data for agent
