@@ -160,3 +160,5 @@
         to chose the model upon creating the object instead of passing it as an argument
 
     68. Can probably clean up class as well but will do that later for sure
+
+    69. Getting pipeline ready, also need to work on db more
