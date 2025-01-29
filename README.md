@@ -164,3 +164,7 @@
     69. Getting pipeline ready, also need to work on db more
 
     70. Got PSQL 16 set up on mac after having to do hella nonsense (update OS and other things)
+
+    71. *** This is for psql login for mac ***
+
+        `https://medium.com/@abhinavsinha_/download-and-configure-postgresql16-on-macos-d41dc49217b6`
