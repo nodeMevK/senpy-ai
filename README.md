@@ -162,3 +162,5 @@
     68. Can probably clean up class as well but will do that later for sure
 
     69. Getting pipeline ready, also need to work on db more
+
+    70. Got PSQL 16 set up on mac after having to do hella nonsense (update OS and other things)
