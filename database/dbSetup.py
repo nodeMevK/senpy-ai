@@ -4,6 +4,10 @@ from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv, find_dotenv
 
+"""
+    Might have to make this a class tbh
+
+"""
 load_dotenv(find_dotenv())
 
 pg_key = os.getenv("POSTGRES_KEY")
