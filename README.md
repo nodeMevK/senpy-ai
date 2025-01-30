@@ -168,3 +168,6 @@
     71. *** This is for psql login for mac ***
 
         `https://medium.com/@abhinavsinha_/download-and-configure-postgresql16-on-macos-d41dc49217b6`
+
+    72. Okay so i was able to create db however first i had to create a postgres username and initially set up the db 
+        this is important 
