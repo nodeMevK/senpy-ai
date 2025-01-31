@@ -8,5 +8,6 @@ from database import dbSetup
 
 Jaine = TwitterAgent(ch1.skizo, "example_deepseek", "deepseek-r1:1.5b")
 
+Jaine.generateStreamResponse
 
 
