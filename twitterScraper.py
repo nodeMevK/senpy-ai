@@ -10,7 +10,7 @@ load_dotenv(find_dotenv())
 
 class GScraper:
 
-    def __init__(self, _cookies):
+    def __init__(self, _cookies: dict):
         self.scraper = Scraper(cookies=_cookies)
         pass
 
