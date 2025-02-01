@@ -8,7 +8,8 @@ import ollama
 
 class TwitterAgent:
     def __init__(
-            self, system_prompt: str,
+            self, 
+            system_prompt: str,
             _model_name: str, 
             llm:str 
             ):
