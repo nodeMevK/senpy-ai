@@ -27,3 +27,5 @@ record = ShortMemory(
 session.add(record)
 session.commit()
 session.close()
+
+
