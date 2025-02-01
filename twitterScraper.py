@@ -89,9 +89,9 @@ cookies = {
 
 #scraper = Scraper(cookies=cookies)
 
-myScraper = GScraper(cookies)
-userId = myScraper.getUserId("notthreadguy")
-print(userId)
+#myScraper = GScraper(cookies)
+#userId = myScraper.getUserId("notthreadguy")
+#print(userId)
 '''tweets = myScraper.scraper.tweets([myScraper.getUserId("notthreadguy")], limit=10)
 tweet = myScraper.getTweetText
 
