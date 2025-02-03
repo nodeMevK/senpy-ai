@@ -8,18 +8,21 @@ from dotenv import load_dotenv, find_dotenv
 from database.dbSetup import getDb
 import os
 
-load_dotenv(find_dotenv())
+def main():
+    load_dotenv(find_dotenv())
 
-cookies = {
-    "ct0": os.getenv("TWIT_COOKIE"),
-    "auth_token": os.getenv("TWIT_AUTH_TOKEN")
-}
+    cookies = {
+        "ct0": os.getenv("TWIT_COOKIE"),
+        "auth_token": os.getenv("TWIT_AUTH_TOKEN")
+    }
 
-Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
+    Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
 
-#Jaine.generateStreamResponse
+    #Jaine.generateStreamResponse
 
-mrScrape = GScraper(cookies)
+    mrScrape = GScraper(cookies)
+
+    
 
 def main():
     try:
