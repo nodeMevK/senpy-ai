@@ -24,6 +24,10 @@ def createDB():
 
 def getDb():
     session = Session()
+    try:
+        yield session
+    finally:
+        session.close()
 
 
 
