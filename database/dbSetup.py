@@ -18,14 +18,24 @@ engine = create_engine(DB_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-Base.metadata.create_all(bind=engine)
+def createDB():
+    Base.metadata.create_all(bind=engine)
 
-record = ShortMemory(
+
+def getDb():
+    session = Session()
+
+
+
+if __name__ == "__main__":
+    createDB()
+    print("DB created successfully.")
+
+
+'''record = ShortMemory(
     post = "quick test"
 )
 
 session.add(record)
 session.commit()
-session.close()
-
-
+session.close()'''
