@@ -1,5 +1,5 @@
 import os 
-from models import Base, ShortMemory, LongMemory, User
+from database.models import Base, ShortMemory, LongMemory, User
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv, find_dotenv

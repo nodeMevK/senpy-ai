@@ -5,7 +5,7 @@ from agent import TwitterAgent
 from characters.ch1 import skizo as skitz
 #from database import dbSetup
 from dotenv import load_dotenv, find_dotenv
-#from database.dbSetup import getDb
+from database.dbSetup import getDb
 import os
 
 def main():
