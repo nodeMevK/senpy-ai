@@ -5,7 +5,7 @@ from agent import TwitterAgent
 from characters.ch1 import skizo as skitz
 #from database import dbSetup
 from dotenv import load_dotenv, find_dotenv
-from database.dbSetup import getDb
+#from database.dbSetup import getDb
 import os
 
 def main():
@@ -18,18 +18,19 @@ def main():
 
     Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
 
-    #Jaine.generateStreamResponse
+    Jaine.generateStreamResponse("Why can't you answer my question about how you are doing?")
 
     mrScrape = GScraper(cookies)
 
-    
 
-def main():
+
+'''def main():
     try:
         pass
     except KeyboardInterrupt:
-        print("Process over") 
+        print("Process over") '''
 
 if __name__ == "__main__":
+    print("running main")
     main()
 
