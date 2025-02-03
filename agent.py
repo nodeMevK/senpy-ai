@@ -25,8 +25,8 @@ class TwitterAgent:
 
         pass
 
-    def generateResponse(self, prompt: str, model: str):
-        response = ollama.chat(model=model, messages=[
+    def generateResponse(self, prompt: str):
+        response = ollama.chat(self.modelName, messages=[
             {
                 'role': 'user',
                 #'content': 'Why is the sky blue?',
