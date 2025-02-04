@@ -171,3 +171,5 @@
 
     72. Okay so i was able to create db however first i had to create a postgres username and initially set up the db 
         this is important 
+
+    73. Not having import issue when running app through pipeline, however gets an issue when i try to run dbSetup alone
