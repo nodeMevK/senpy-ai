@@ -173,3 +173,7 @@
         this is important 
 
     73. Not having import issue when running app through pipeline, however gets an issue when i try to run dbSetup alone
+
+    74. haven't pushed docker setup from macbook yet because still having errors
+
+        1. now having errors with ollama being installed in docker
