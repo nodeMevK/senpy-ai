@@ -177,3 +177,5 @@
     74. haven't pushed docker setup from macbook yet because still having errors
 
         1. now having errors with ollama being installed in docker
+
+    75. Still trying to figure out docker issue
