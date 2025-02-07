@@ -179,3 +179,6 @@
         1. now having errors with ollama being installed in docker
 
     75. Still trying to figure out docker issue
+
+    76. Highkey fixed docker issue, just need to get running with Ollama on the side 
+        - There is a gpt chat with this in it on the computer come back
