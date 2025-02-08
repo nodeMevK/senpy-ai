@@ -16,7 +16,7 @@ class TwitterAgent:
         self.system = ollama.create(
             model=_model_name, 
             from_=llm,
-            parameters={"seed": 42, "temperature": 0},    
+            parameters={"seed": 42, "temperature": 0.8},    
             system=system_prompt,
             stream=False,
         )
@@ -31,7 +31,7 @@ class TwitterAgent:
                 'role': 'user',
                 #'content': 'Why is the sky blue?',
                 #'content': prompts.whats_hot_prompt(prompts.get_example_tweets(), "", ch1.skizo)
-                'content': prompt
+                'content': prompt,
             },
         ])
         return response['message']['content']
@@ -51,4 +51,7 @@ class TwitterAgent:
         
 
     def calculateUserScore(self, users):
+        pass
+
+    def asyncChat(self, prompt):
         pass
