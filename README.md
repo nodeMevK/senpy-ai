@@ -20,6 +20,8 @@
 
 5. Docker:
     - setup docker soon
+    - Run docker setup coming soon
+    - Need to get docker to listen to ollama locally i guess or may have to do an ec2 instance (not sure yet)
 
 6. **TODO** 
 
