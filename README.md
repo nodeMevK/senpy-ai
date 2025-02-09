@@ -186,3 +186,5 @@
         - There is a gpt chat with this in it on the computer come back
 
     77. Docker is building check entry above
+
+    78. Just need a quick push its superbowl sunday
