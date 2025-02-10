@@ -1,12 +1,8 @@
 from twitter.scraper import Scraper
 from twitter.util import init_session 
 from twitter.account import Account
-import os
 import json
-from dotenv import load_dotenv, find_dotenv
 import pandas as pd
-
-load_dotenv(find_dotenv())
 
 class GScraper:
 
@@ -17,12 +13,12 @@ class GScraper:
     def getUserId(self, username):
         ''' get id of twitter user '''
         result = self.scraper.users([username])
-        return result[0]
-        #return result[0]['data']['user']['result']['rest_id']
+        #return result[0]
+        return result[0]['data']['user']['result']['rest_id']
 
     def getTweets(self, id):
         '''get a list of tweets from a user'''
-        result = self.scraper.tweets(id)
+        result = self.scraper.tweets([id], limit=10)
         return result
 
     def organizeTweetData(self, tweets):
@@ -38,6 +34,9 @@ class GScraper:
         '''get '''
         text = tweet[0]['data']['user']['result']
         return text
+    
+    def getTimeLineTweets(self):
+        pass
 
     def getTweetInfo(self, tweetList):
         res_arr = []
@@ -81,11 +80,12 @@ class GScraper:
 
         return res_arr
     
+    
 
-cookies = {
+'''cookies = {
     "ct0": os.getenv("TWIT_COOKIE"),
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
-}
+}'''
 
 #scraper = Scraper(cookies=cookies)
 
