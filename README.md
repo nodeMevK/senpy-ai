@@ -188,3 +188,5 @@
     77. Docker is building check entry above
 
     78. Just need a quick push its superbowl sunday
+
+    79. With new account tl method, just get to point of entries then the rest should work fine.. will make a function to just get entries
