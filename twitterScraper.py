@@ -8,9 +8,10 @@ class GScraper:
 
     def __init__(self, _cookies: dict):
         self.scraper = Scraper(cookies=_cookies)
+        self.account = Account(cookies=_cookies)
         pass
 
-    def getUserId(self, username):
+    def getUserId(self, username: str):
         ''' get id of twitter user '''
         result = self.scraper.users([username])
         #return result[0]
@@ -36,7 +37,12 @@ class GScraper:
         return text
     
     def getTimeLineTweets(self):
-        pass
+        timeline = self.account.home_timeline()
+        return timeline
+        
+    def getLatestTl(self, _limit: int):
+        latest_tl = self.account.home_latest_timeline(limit=_limit)
+        return latest_tl
 
     def getTweetInfo(self, tweetList):
         res_arr = []
