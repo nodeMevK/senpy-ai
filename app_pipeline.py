@@ -16,6 +16,8 @@ def main():
         "auth_token": os.getenv("TWIT_AUTH_TOKEN")
     }
 
+    ''' Create agents '''
+
     Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
 
     Jaine.generateStreamResponse("Why can't you answer my question about how you are doing?")
@@ -23,6 +25,8 @@ def main():
     mrScrape = GScraper(cookies)
 
 
+
+    ''' pull references from db and place in memory locations  '''
 
 '''def main():
     try:
