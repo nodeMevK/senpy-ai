@@ -53,7 +53,7 @@ def respond_to_tweet(_tweet, context, personality):
     template = """
         Analyze the following tweet: {tweet}
 
-        Upon analyzing the tweet, think of the best suited response. Be witty. Stick to you character.  
+        Upon analyzing the tweet, think of the best suited response and provide a brief answer. Be witty. Stick to you character. 
 
         Use the following text for context: {text}
 
@@ -66,7 +66,7 @@ def respond_aggresively_to_tweet(_tweet, context, personality):
     template = """
         Analyze the following tweet: {tweet}
 
-        Upon analyzing the tweet, think of the best suited response. Be aggressive and condensending. An asshole even. 
+        Upon analyzing the tweet, think of the best suited response and provide a brief answer. Be aggressive and condensending. An asshole even. 
 
         Use the following text for context: {text}
 
