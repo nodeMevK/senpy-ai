@@ -43,6 +43,49 @@ class GScraper:
     def getLatestTl(self, _limit: int):
         latest_tl = self.account.home_latest_timeline(limit=_limit)
         return latest_tl
+    
+    def getEntries(self, tl_tweets):
+        res_arr = []
+
+        text = tl_tweets[0]["data"]["home"]["home_timeline_urt"]["instructions"][0]["entries"]
+        for entry in text:
+            res = {
+                "user_name": "",
+                "name": "",
+                "tweet": "",
+                "tweet_id": "",
+                "timestamp": ""
+            }
+            try:
+                if (entry['entryId'][:5] == "tweet"):
+                
+                    ''' At this point need to get other data in legacy as well '''
+                    ''' maybe some dictionary comprehension or add straight to a db '''
+                    entry_result = entry['content']['itemContent']['tweet_results']['result']
+                    legacy = entry_result['legacy']
+                    core = entry_result['core']
+
+
+                    ''' user info is in core layer '''
+                    res["user_name"] = core["user_results"]["result"]["legacy"]["screen_name"]
+                    res["name"] = core["user_results"]["result"]["legacy"]["name"]
+
+                    res["tweet"] = legacy["full_text"]
+                    res["tweet_id"] = legacy["id_str"]
+                    res["timestamp"] = legacy["created_at"]
+
+                    res_arr.append(res)
+                
+                else:
+
+                    # TODO
+
+                    print("either a reply or something else .. ")
+            except KeyError as e:
+                print(e)
+                continue
+        return res_arr
+        
 
     def getTweetInfo(self, tweetList):
         res_arr = []
