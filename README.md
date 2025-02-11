@@ -196,3 +196,5 @@
     81. editted scraper class to handle tl tweet extraction as well
 
     82. need to get back to sorting db out
+
+    83. also have to add things to scraper for tweeting and such
