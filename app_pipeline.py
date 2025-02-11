@@ -18,9 +18,11 @@ def main():
 
     ''' Create agents '''
 
-    Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
+    #Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
+    Jaine = TwitterAgent(skitz, "example_latest", "llama3.2:latest", 20)
 
-    Jaine.generateStreamResponse("Why can't you answer my question about how you are doing?")
+    #Jaine.generateStreamResponse("Why can't you answer my question about how you are doing?")
+    Jaine.generateStreamResponse("What's your take on the crypto market right now?")
 
     mrScrape = GScraper(cookies)
 
