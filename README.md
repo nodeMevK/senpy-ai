@@ -194,3 +194,5 @@
     80. changed up agent class a little (with ctx)
 
     81. editted scraper class to handle tl tweet extraction as well
+
+    82. need to get back to sorting db out
