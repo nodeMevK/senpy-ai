@@ -135,29 +135,3 @@ class GScraper:
     "ct0": os.getenv("TWIT_COOKIE"),
     "auth_token": os.getenv("TWIT_AUTH_TOKEN")
 }'''
-
-#scraper = Scraper(cookies=cookies)
-
-#myScraper = GScraper(cookies)
-#userId = myScraper.getUserId("notthreadguy")
-#print(userId)
-'''tweets = myScraper.scraper.tweets([myScraper.getUserId("notthreadguy")], limit=10)
-tweet = myScraper.getTweetText
-
-final = myScraper.getTweetInfo(tweet)
-for section in final:
-    print(section)'''
-
-'''tweets = scraper.tweets([getUserId("notthreadguy")], limit=10)
-new_tweet = getTweetText(tweets)
-
-with open('tweetData.txt', 'w') as file:
-    json.dump(new_tweet, file)
-
-
-final = getTweetInfo(new_tweet)
-print(len(final))
-for section in final:
-    print(section)'''
-
-
