@@ -11,12 +11,13 @@ class TwitterAgent:
             self, 
             system_prompt: str,
             _model_name: str, 
-            llm:str 
+            llm:str,
+            ctx:int = 128,
             ):
         self.system = ollama.create(
             model=_model_name, 
             from_=llm,
-            parameters={"seed": 42, "temperature": 0.8, "num_ctx": 16},    
+            parameters={"seed": 42, "temperature": 0.8, "num_ctx": ctx},    
             system=system_prompt,
             stream=False,
         )
