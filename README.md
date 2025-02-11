@@ -198,3 +198,5 @@
     82. need to get back to sorting db out
 
     83. also have to add things to scraper for tweeting and such
+
+    84. Fixed issue with length of llm response .. need to find the sweet spot for response lenghts
