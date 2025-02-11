@@ -28,6 +28,9 @@ def main():
 
     ''' pull references from db and place in memory locations  '''
 
+
+    ''' start tweeting things '''
+
 '''def main():
     try:
         pass
