@@ -49,31 +49,33 @@ def whats_hot_prompt(tweets_data, context, personality):
     return template.format(posts=tweets_data, text=context, personality=personality)
 
 
-def respond_to_tweet(tweets_data, context, personality):
+def respond_to_tweet(_tweet, context, personality):
     template = """
-        Analyze the following tweet
+        Analyze the following tweet: {tweet}
 
-        Upon analyzing the tweet, think of the best suited response.  
+        Upon analyzing the tweet, think of the best suited response. Be witty. Stick to you character.  
 
-        {tweets}
-        {text}
+        Use the following text for context: {text}
 
 
     """
 
-    return template.format(tweets=tweets_data, text=context)
+    return template.format(tweet=_tweet, text=context)
 
-def respond_aggresively_to_tweet(tweets_data, context, personality):
+def respond_aggresively_to_tweet(_tweet, context, personality):
     template = """
-        Analyze the following posts and text
+        Analyze the following tweet: {tweet}
 
-        {tweets}
-        {text}
+        Upon analyzing the tweet, think of the best suited response. Be aggressive and condensending. An asshole even. 
+
+        Use the following text for context: {text}
 
 
     """
 
-    return template.format(tweets=tweets_data, text=context)
+    return template.format(tweets=_tweet, text=context)
+
+
 
 def get_example_tweets():
     """Returns the full list of example tweets as a formatted string"""
