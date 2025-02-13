@@ -23,8 +23,11 @@ def addToLongTerm(record):
 
 def makeShortEntry(data):
     record = ShortMemory(
-        id = data["id"],
-        post = data["post"],
+        id = data["tweet_id"],
+        username = data["user_name"],
+        name = data["name"],
+        post = data["tweet"],
+        timestamp = data["timestamp"]
     )
     
 
@@ -32,7 +35,10 @@ def makeShortEntry(data):
 
 def makeLongEntry(data):
     record = LongMemory(
-        id = data["id"],
-        post = data["post"],
+        id = data["tweet_id"],
+        username = data["user_name"],
+        name = data["name"],
+        post = data["tweet"],
+        timestamp = data["timestamp"]
     )
     return record 
