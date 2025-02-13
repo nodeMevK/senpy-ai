@@ -21,5 +21,16 @@ def addToLongTerm(record):
     session.commit()
     return
 
-def makeEntry():
-    return
+def makeShortEntry(data):
+    record = ShortMemory(
+        post = data["post"],
+    )
+    
+
+    return record 
+
+def makeLongEntry(data):
+    record = LongMemory(
+        post = data["post"]
+    )
+    return record 
