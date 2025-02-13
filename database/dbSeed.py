@@ -9,17 +9,13 @@ from database.dbSetup import Session, engine
 
 ''' need to get to this asap'''
 session = Session()
-def addToShortTerm(record):
+def addToDb(record):
 
     session.add(record)
     session.commit()
-    return
+    print("Record Added to DB")
+    #return
 
-def addToLongTerm(record):
-
-    session.add(record)
-    session.commit()
-    return
 
 def makeShortEntry(data):
     record = ShortMemory(
@@ -29,9 +25,8 @@ def makeShortEntry(data):
         post = data["tweet"],
         timestamp = data["timestamp"]
     )
-    
-
-    return record 
+    addToDb(record)
+    #return record 
 
 def makeLongEntry(data):
     record = LongMemory(
@@ -41,4 +36,5 @@ def makeLongEntry(data):
         post = data["tweet"],
         timestamp = data["timestamp"]
     )
-    return record 
+    addToDb(record)
+    #return record 
