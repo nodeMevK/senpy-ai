@@ -7,13 +7,21 @@ class ShortMemory(Base):
     __tablename__ = "short_term_memory"
 
     id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, index=True)
+    name = Column(String, index=True)
     post = Column(String, index=True)
+    timestamp = Column(String, index=True)
 
 
 class LongMemory(Base):
     __tablename__ = "long_term_memory"
 
     id = Column(Integer, primary_key=True)
+    username = Column(String, index=True)
+    name = Column(String, index=True)
+    post = Column(String, index=True)
+    timestamp = Column(String, index=True)
+
 
 
 class User(Base):
