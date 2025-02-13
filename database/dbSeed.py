@@ -8,11 +8,17 @@ from database.dbSetup import Session, engine
 
 
 ''' need to get to this asap'''
+session = Session()
+def addToShortTerm(record):
 
-def addToShortTerm():
+    session.add(record)
+    session.commit()
     return
 
-def addToLongTerm():
+def addToLongTerm(record):
+
+    session.add(record)
+    session.commit()
     return
 
 def makeEntry():
