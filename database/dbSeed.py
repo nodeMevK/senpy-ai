@@ -9,3 +9,11 @@ from database.dbSetup import Session, engine
 
 ''' need to get to this asap'''
 
+def addToShortTerm():
+    return
+
+def addToLongTerm():
+    return
+
+def makeEntry():
+    return
