@@ -1,6 +1,5 @@
 import numpy as np
-
-#from database.models import 
+#from database.models import LongMemory, ShortMemory
 
 def getLongTermMemory():
 
