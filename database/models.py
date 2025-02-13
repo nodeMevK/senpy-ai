@@ -9,9 +9,9 @@ class ShortMemory(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, index=True)
     name = Column(String, index=True)
+    tweet_id = Column(Integer)
     post = Column(String, index=True)
-    timestamp = Column(String, index=True)
-
+    timestamp = Column(DateTime(timezone=True))
 
 class LongMemory(Base):
     __tablename__ = "long_term_memory"
@@ -19,9 +19,9 @@ class LongMemory(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String, index=True)
     name = Column(String, index=True)
+    tweet_id = Column(Integer)
     post = Column(String, index=True)
-    timestamp = Column(String, index=True)
-
+    timestamp = Column(DateTime(timezone=True))
 
 
 class User(Base):

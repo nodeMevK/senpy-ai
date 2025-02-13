@@ -19,7 +19,7 @@ def addToDb(record):
 
 def makeShortEntry(data):
     record = ShortMemory(
-        id = data["tweet_id"],
+        tweet_id = data["tweet_id"],
         username = data["user_name"],
         name = data["name"],
         post = data["tweet"],
@@ -30,7 +30,7 @@ def makeShortEntry(data):
 
 def makeLongEntry(data):
     record = LongMemory(
-        id = data["tweet_id"],
+        tweet_id = data["tweet_id"],
         username = data["user_name"],
         name = data["name"],
         post = data["tweet"],
