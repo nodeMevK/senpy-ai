@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Float, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -41,6 +42,8 @@ class Tweets(Base):
     tweet_id = Column(Integer)
     time_stamp = Column(DateTime(timezone=True))
 
+    #likes = relationship("Like", back_populates=)
+
 
 
 class TimeLineTweets(Base):
@@ -53,3 +56,10 @@ class TimeLineTweets(Base):
     time_stamp = Column(DateTime(timezone=True))
 
 
+class Like(Base):
+    __tablename__ = "likes"
+
+
+class Comment(Base):
+    __tablename__ = "comments"
+  
