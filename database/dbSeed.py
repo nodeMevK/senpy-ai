@@ -67,3 +67,16 @@ def insertUser(data):
         user_id = data["user_id"]
     )
     addToDb(record)
+
+def insertLike(data):
+    record = ()
+    addToDb(record)
+
+def insertComment(data):
+    record = ()
+    addToDb(record)
+
+def insertLike(data):
+    record = ()
+    addToDb(record)
+    
