@@ -202,3 +202,5 @@
     84. Fixed issue with length of llm response .. need to find the sweet spot for response lenghts
 
     85. Need to update models 
+
+    86. need to work on async asap
