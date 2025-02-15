@@ -12,7 +12,7 @@ class TwitterAgent:
             system_prompt: str,
             _model_name: str, 
             llm:str,
-            amt:int = 50,
+            amt:int = -1,
             ):
         self.system = ollama.create(
             model=_model_name, 
