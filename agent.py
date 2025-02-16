@@ -1,4 +1,5 @@
 import ollama
+import asyncio
 
 ''' 
     on final version have to change all instances of example back to agent. 
@@ -23,6 +24,7 @@ class TwitterAgent:
         )
 
         self.modelName = _model_name
+        self.client = ollama.AsyncClient()
 
         pass
 
@@ -54,5 +56,6 @@ class TwitterAgent:
     def calculateUserScore(self, users):
         pass
 
-    def asyncChat(self, prompt):
-        pass
+    async def asyncChat(self, prompt):
+        response = await self.client.generate(self.modelName, prompt)
+        print(response)
