@@ -28,8 +28,11 @@ while True:
     try:
         #print('enter question ...')
         question = input("\nenter question ... ")
+        print("\n")
         #asyncio.run(alyssa_agent.asyncChat(question))
         alyssa_agent.generateStreamResponse(question)
+        print("\n")
+
     except KeyboardInterrupt:
         print('\nGoodbye')
         break
