@@ -12,18 +12,19 @@ class TwitterAgent:
             self, 
             system_prompt: str,
             _model_name: str, 
-            llm:str,
+            _llm:str,
             amt:int = -1,
             ):
         self.system = ollama.create(
             model=_model_name, 
-            from_=llm,
+            from_= _llm,
             parameters={"seed": 42, "temperature": 0.8, "num_predict": amt},    
             system=system_prompt,
             stream=False,
         )
 
         self.modelName = _model_name
+        self.llm = _llm
         self.client = ollama.AsyncClient()
 
         pass
@@ -51,11 +52,14 @@ class TwitterAgent:
         for part in ollama.chat(self.modelName, messages=messages, stream=True):
             print(part['message']['content'], end='', flush=True)
 
+        print("\n")
+
         
 
     def calculateUserScore(self, users):
         pass
 
     async def asyncChat(self, prompt):
-        response = await self.client.generate(self.modelName, prompt)
-        print(response)
+        print("waiting for response .. ")
+        response = await self.client.generate(self.llm, prompt)
+        print(response['response'])
