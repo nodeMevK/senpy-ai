@@ -51,9 +51,6 @@ class TwitterAgent:
 
         for part in ollama.chat(self.modelName, messages=messages, stream=True):
             print(part['message']['content'], end='', flush=True)
-
-        print("\n")
-
         
 
     def calculateUserScore(self, users):
