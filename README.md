@@ -204,3 +204,5 @@
     85. Need to update models 
 
     86. need to work on async asap
+
+    87. generate functions in ollama is very slow
