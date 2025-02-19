@@ -210,5 +210,7 @@
 
     87. generate functions in ollama is very slow
 
+    88. looking into structured inputs
+
 
 
