@@ -61,6 +61,6 @@ class TwitterAgent:
         response = await self.client.generate(self.llm, prompt)
         print(response['response'])
 
-    def agenEmbed(self,input):
+    def agentEmbed(self,input):
         response = ollama.embed(self.llm, input)
         return response['embeddings']
