@@ -23,7 +23,10 @@
     - Run docker setup coming soon
     - Need to get docker to listen to ollama locally i guess or may have to do an ec2 instance (not sure yet)
 
-6. **TODO** 
+6. Speech Modeling
+    - Working on finding STT -> TTS options now
+
+7. **TODO** 
 
     1. ~~will try again with playwright~~
 
@@ -206,3 +209,6 @@
     86. need to work on async asap
 
     87. generate functions in ollama is very slow
+
+
+
