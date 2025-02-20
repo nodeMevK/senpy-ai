@@ -1,11 +1,19 @@
 import ollama
 import asyncio
+from pydantic import BaseModel
 
 ''' 
     on final version have to change all instances of example back to agent. 
     only using example now to save space
 
 '''
+
+class Post(BaseModel):
+    post: str
+
+class PostList(BaseModel):
+    posts: list[Post]
+
 
 class TwitterAgent:
     def __init__(
