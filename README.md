@@ -212,6 +212,5 @@
 
     88. looking into structured outputs
 
-
-
-
+    89. to check what port things are running on eventually for docker setup 
+        `lsof -i -P -n | grep LISTEN`
