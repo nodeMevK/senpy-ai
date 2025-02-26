@@ -23,7 +23,7 @@ class Agent:
             _llm:str,
             amt:int = -1,
             temp:int = 0.8
-            ):
+        ):
         
         self.system = ollama.create(
             model=_model_name, 
