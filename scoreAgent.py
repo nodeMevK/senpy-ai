@@ -14,7 +14,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 
-newImage = Image.open('./image1.jpg')
+#newImage = Image.open('./image1.jpg')
 
 print("creating agent .. ")
 #score_agent = Agent(character, "scorellm", "llama3.2")
@@ -23,6 +23,5 @@ score_agent2 = Agent(character, "scorellm2", "llava", temp=0.2)
 print("agent created .. ")
 
 print("prompting agent ..")
-score_agent2.generateStreamResponseWImage("What is the score displayed in this image: ", encode_image('./image3.jpeg'))
+score_agent2.generateStreamResponseWImage("What is the score displayed in this image: ", encode_image('./static/image3.jpeg'))
 print("\n")
-score_agent2.generateStreamResponse("What color is the sky?")
