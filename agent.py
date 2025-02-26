@@ -15,7 +15,7 @@ class PostList(BaseModel):
     posts: list[Post]
 
 
-class TwitterAgent:
+class Agent:
     def __init__(
             self, 
             system_prompt: str,
