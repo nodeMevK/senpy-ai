@@ -61,7 +61,7 @@ class Agent:
         for part in ollama.chat(self.modelName, messages=messages, stream=True):
             print(part['message']['content'], end='', flush=True)
 
-    def generateStreamResponseWImage(self, prompt: str, image: None):
+    def generateStreamResponseWImage(self, prompt: str, image):
         messages = [
             {
                 'role': 'user',
