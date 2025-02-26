@@ -22,19 +22,20 @@ class TwitterAgent:
             _model_name: str, 
             _llm:str,
             amt:int = -1,
+            temp:int = 0.8
             ):
+        
         self.system = ollama.create(
             model=_model_name, 
             from_= _llm,
-            parameters={"seed": 42, "temperature": 0.8, "num_predict": amt},    
+            parameters={"seed": 42, "temperature": temp, "num_predict": amt},    
             system=system_prompt,
             stream=False,
         )
-
         self.modelName = _model_name
         self.llm = _llm
         self.client = ollama.AsyncClient()
-
+        
         pass
 
     def generateResponse(self, prompt: str):
@@ -48,12 +49,24 @@ class TwitterAgent:
         ])
         return response['message']['content']
         
-
     def generateStreamResponse(self, prompt: str):
         messages = [
             {
                 'role': 'user',
                 'content': prompt,
+                
+            },
+        ]
+
+        for part in ollama.chat(self.modelName, messages=messages, stream=True):
+            print(part['message']['content'], end='', flush=True)
+
+    def generateStreamResponseWImage(self, prompt: str, image: None):
+        messages = [
+            {
+                'role': 'user',
+                'content': prompt,
+                'images': [image]
             },
         ]
 
