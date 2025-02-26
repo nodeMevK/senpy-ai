@@ -1,4 +1,4 @@
-from agent import TwitterAgent
+from agent import Agent
 from PIL import Image
 import base64
 
@@ -17,8 +17,8 @@ def encode_image(image_path):
 newImage = Image.open('./image1.jpg')
 
 print("creating agent .. ")
-#score_agent = TwitterAgent(character, "scorellm", "llama3.2")
-score_agent2 = TwitterAgent(character, "scorellm2", "llava", temp=0.2)
+#score_agent = Agent(character, "scorellm", "llama3.2")
+score_agent2 = Agent(character, "scorellm2", "llava", temp=0.2)
 
 print("agent created .. ")
 
