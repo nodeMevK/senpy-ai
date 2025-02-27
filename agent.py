@@ -21,8 +21,9 @@ class Agent:
             system_prompt: str,
             _model_name: str, 
             _llm:str,
+            _name: str, 
             amt:int = -1,
-            temp:int = 0.8
+            temp:int = 0.8,
         ):
         
         self.system = ollama.create(
@@ -35,6 +36,7 @@ class Agent:
         self.modelName = _model_name
         self.llm = _llm
         self.client = ollama.AsyncClient()
+        self.name = _name
         
         pass
 
@@ -85,3 +87,8 @@ class Agent:
     def agentEmbed(self,input):
         response = ollama.embed(self.llm, input)
         return response['embeddings']
+    
+    # return info for agent - llm, model name, 
+    def agentInfo(self):
+        returnDict = {}
+        return returnDict
