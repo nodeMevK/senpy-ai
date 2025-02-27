@@ -1,7 +1,7 @@
 ''' file to run bot continuously '''
 
 from twitterScraper import GScraper
-from agent import TwitterAgent
+from agent import Agent
 from characters.ch1 import skizo as skitz
 #from database import dbSetup
 from dotenv import load_dotenv, find_dotenv
@@ -19,7 +19,7 @@ def main():
     ''' Create agents '''
 
     #Jaine = TwitterAgent(skitz, "example_deepseek", "deepseek-r1:1.5b")
-    Jaine = TwitterAgent(skitz, "example_latest", "llama3.2:latest", 20)
+    Jaine = Agent(skitz, "example_latest", "llama3.2:latest", 20)
 
     #Jaine.generateStreamResponse("Why can't you answer my question about how you are doing?")
     Jaine.generateStreamResponse("What's your take on the crypto market right now?")
