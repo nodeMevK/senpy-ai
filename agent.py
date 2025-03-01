@@ -44,8 +44,6 @@ class Agent:
         response = ollama.chat(self.modelName, messages=[
             {
                 'role': 'user',
-                #'content': 'Why is the sky blue?',
-                #'content': prompts.whats_hot_prompt(prompts.get_example_tweets(), "", ch1.skizo)
                 'content': prompt,
             },
         ])
