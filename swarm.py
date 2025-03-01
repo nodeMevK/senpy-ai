@@ -43,9 +43,12 @@ class Swarm:
 
         return 
     
-    # list agent info 
-    def listAgentInfo():
-        return
+    # return info on agents  
+    def swarmInfo(self):
+        ls = []
+        for agent in self.agents:
+            ls.add(agent.agentInfo)
+        return ls
     
 
         
