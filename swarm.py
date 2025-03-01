@@ -2,6 +2,12 @@ from agent import Agent
 import threading
 import multiprocessing
 
+manager_logic = '''
+    Assess the reponses from these agents. Rate them on a scale from 1-10, 10 being the best. 
+    The rating should assess the correctness and 
+
+'''
+
 class Swarm:
     def __init__(self, _agents: list[Agent], _manager: Agent):
 
@@ -12,11 +18,14 @@ class Swarm:
 
     # function where manager agent decides score of agent reponses
     # actually might fix this with a pedantic approach 
-    def managerScore(self, agentResponses: list):
-        for response in agentResponses:
-            self.managerAgent.generateStreamResponse("")
+    # might not need to loop through, instead just check them all at once instead of 1 by 1
+    def managerScore(self, agentResponses: list, managerLogic: str):
 
-        return
+        prompt = ''''''
+        for response in agentResponses:
+            self.managerAgent.generateStreamResponse(prompt)
+
+        return 
         
     def coordinatedThinkingThreading(self, prompt: str):
         threads = []
