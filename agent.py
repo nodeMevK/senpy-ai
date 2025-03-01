@@ -94,4 +94,8 @@ class Agent:
             "model_name": self.modelName,
             "agent_name": self.name,
         }
+    
+    # a function to add new skills to agent
+    def addSkills(self, skill):
+        return
         
