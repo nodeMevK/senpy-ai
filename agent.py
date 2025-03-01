@@ -88,5 +88,10 @@ class Agent:
     
     # return info for agent - llm, model name, 
     def agentInfo(self):
-        returnDict = {}
-        return returnDict
+        return {
+            "agent_name": "",
+            "llm": self.llm,
+            "model_name": self.modelName,
+            "agent_name": self.name,
+        }
+        
