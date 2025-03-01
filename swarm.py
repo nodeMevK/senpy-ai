@@ -44,11 +44,13 @@ class Swarm:
         return 
     
     # return info on agents  
+    # need to find a spot for manager info might just make new function for it 
     def swarmInfo(self):
         ls = []
         for agent in self.agents:
             ls.add(agent.agentInfo)
         return ls
+    
     
 
         
