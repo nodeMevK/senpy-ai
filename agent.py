@@ -37,6 +37,7 @@ class Agent:
         self.llm = _llm
         self.client = ollama.AsyncClient()
         self.name = _name
+        self.skills = []
         
         pass
 
