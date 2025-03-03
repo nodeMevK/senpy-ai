@@ -1,7 +1,7 @@
 ''' file to make initial dbs'''
 
 
-from models import ShortMemory, LongMemory, User, TimeLineTweets, Tweets
+from database.models import ShortMemory, LongMemory, User, TimeLineTweets, Tweets
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import sessionmaker
 from database.dbSetup import Session, engine
@@ -18,7 +18,7 @@ def addToDb(record):
     #return
 
 
-def makeShortEntry(data):
+def makeShortEntry(data: dict):
     record = ShortMemory(
         tweet_id = data["tweet_id"],
         username = data["user_name"],
@@ -29,7 +29,7 @@ def makeShortEntry(data):
     addToDb(record)
     #return record 
 
-def makeLongEntry(data):
+def makeLongEntry(data: dict):
     record = LongMemory(
         tweet_id = data["tweet_id"],
         username = data["user_name"],
@@ -40,7 +40,7 @@ def makeLongEntry(data):
     addToDb(record)
     #return record 
 
-def insertTlTweet(data):
+def insertTlTweet(data: dict):
     record = TimeLineTweets(
         username = data["user_name"],
         name = data["name"],
@@ -50,7 +50,7 @@ def insertTlTweet(data):
     addToDb(record)
 
 
-def insertTweet(data):
+def insertTweet(data: dict):
     record = Tweets(
         username = data["user_name"],
         name = data["name"],
@@ -61,7 +61,7 @@ def insertTweet(data):
 
 
 # havent clearly made a section in scraper class to create a dictionary with username and id
-def insertUser(data):
+def insertUser(data: dict):
     record = User(
         username = data["username"],
         user_id = data["user_id"]
