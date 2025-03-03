@@ -14,7 +14,7 @@
     - make sure ollama version is >=0.5.7
 
 3. Psql Version: 16.4
-    - `psql -U postgres`
+    - `psql -U postgres` - for windows
 
 4. Llama Version:
 
