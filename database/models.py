@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Float, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Float, ForeignKey, BIGINT
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -10,7 +10,7 @@ class ShortMemory(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, index=True)
     name = Column(String, index=True)
-    tweet_id = Column(Integer)
+    tweet_id = Column(BIGINT)
     post = Column(String, index=True)
     timestamp = Column(DateTime(timezone=True))
 
@@ -55,11 +55,11 @@ class TimeLineTweets(Base):
     tweet_id = Column(Integer)
     time_stamp = Column(DateTime(timezone=True))
 
-
+'''
 class Like(Base):
     __tablename__ = "likes"
 
 
 class Comment(Base):
-    __tablename__ = "comments"
+    __tablename__ = "comments"'''
   
