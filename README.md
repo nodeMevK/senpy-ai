@@ -15,6 +15,9 @@
 
 3. Psql Version: 16.4
     - `psql -U postgres` - for windows
+    - have to run this in powershell to see empjis i guess `chcp 65001`
+    - to go back to regular encoding use `chcp 437` or `chcp 1252`
+    - *** Getting error in psql rn because of emojis and UTF8 drama on windows
 
 4. Llama Version:
 

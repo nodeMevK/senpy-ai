@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv, find_dotenv
 from twitterScraper import GScraper
+from database.dbSeed import *
 
 import json
 
@@ -35,7 +36,10 @@ final = testScraper.getEntries(tl)
 print(len(final))
 
 for section in final:
+    makeShortEntry(section)
+    print("entry added")
     print(section)
+
 '''print("dumping to file ...")
 with open('test.txt', 'w') as file:
     json.dump(tl, file)'''
