@@ -73,7 +73,13 @@ def respond_aggresively_to_tweet(_tweet, context, personality):
 
     """
 
-    return template.format(tweets=_tweet, text=context)
+    return template.format(tweet=_tweet, text=context)
+
+def shortMemoryPrompt(posts, data):
+    template = """
+
+    """
+    return template
 
 
 

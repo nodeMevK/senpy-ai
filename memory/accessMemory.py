@@ -1,18 +1,35 @@
 import numpy as np
-#from database.models import LongMemory, ShortMemory
+from database.models import LongMemory, ShortMemory
+#from remotes.prompts import 
+import ollama
+from sqlalchemy.orm import Session
 
-def getLongTermMemory():
 
-    ''' get data from db '''
-    return
+class MemoryManager:
+    def __init__(self):
+        pass
 
-def getShortTermMemory():
+    def embedData(self, text: str):
+        response = ollama.embed(self.llm, input)
+        return response['embeddings']
 
-    ''' get short term mem from db '''
-    return
+    def getLongTermMemory(self):
 
-def formatMemory():
-    return
 
-def storeMemory():
-    return
+        ''' get data from db '''
+        return
+
+    def getShortTermMemory(self):
+
+        ''' get short term mem from db '''
+
+        return
+
+    def formatMemory(self):
+        return
+    
+    def getLongMemory(self, db: Session):
+        return db.query(LongMemory).all()
+    
+    def getShortMemory(self, db: Session):
+        return db.query(ShortMemory).all()
