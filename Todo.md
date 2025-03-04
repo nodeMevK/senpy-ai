@@ -5,3 +5,4 @@
 3. Need to try to score answers and come up with final response - figuring out if i need to loop this
 4. Update functions for agentInfo in swarm and agent classes
 5. update scoring prompt for swarm manager - swarmPrompts.py
+6. Recently put ollama into a docker image.. need to mess around with this
