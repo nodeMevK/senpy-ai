@@ -9,4 +9,11 @@ session = Session()
 memories = manager.getShortMemory(session)
 
 for memory in memories:
-    print(memory.post)
+    dct = {
+        "name": memory.username,
+        "post": memory.post,
+        "timestamp": memory.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
+    
+
+    }
+    print(dct) 
