@@ -219,3 +219,4 @@
         `lsof -i -P -n | grep LISTEN`
 
     90. quick nothing
+    91. Need to check on docker images
