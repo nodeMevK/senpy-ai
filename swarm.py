@@ -26,7 +26,9 @@ class Swarm:
             self.managerAgent.generateStreamResponse(prompt)
 
         return 
-        
+    
+
+    # for I/O bound tasks    
     def coordinatedThinkingThreading(self, prompt: str):
         threads = []
         for agent in self.agents:
@@ -40,6 +42,7 @@ class Swarm:
         return
 
 
+    # for CPU intensive tasks
     def coordinatedThinkingProcessing(self, prompt: str):
         processes = []
         for agent in self.agents:
