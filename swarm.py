@@ -69,6 +69,9 @@ class Swarm:
         self.agents.append(agent)
         return
 
+    # function to remove agent from list
+    def removeAgent(self, agent: Agent):
+        return
     
 
         
