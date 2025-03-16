@@ -14,6 +14,5 @@ for memory in memories:
         "post": memory.post,
         "timestamp": memory.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
     
-
     }
     print(dct) 
