@@ -63,6 +63,12 @@ class Swarm:
             ls.add(agent.agentInfo)
         return ls
     
+
+    # function ot add to list of agents
+    def addAgent(self, agent: Agent):
+        self.agents.append(agent)
+        return
+
     
 
         
