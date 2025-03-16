@@ -1,12 +1,19 @@
 from agent import Agent
 import threading
 import multiprocessing
+from pydantic import BaseModel
 
 manager_logic = '''
     Assess the reponses from these agents. Rate them on a scale from 1-10, 10 being the best. 
     The rating should assess the correctness and 
 
 '''
+
+# setting up pydantic classes
+class Response(BaseModel):
+    score: str
+    pass
+
 
 class Swarm:
     def __init__(self, _agents: list[Agent], _manager: Agent):
