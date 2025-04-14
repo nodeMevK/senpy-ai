@@ -41,6 +41,7 @@ class Tweets(Base):
     tweet = Column(String)
     tweet_id = Column(Integer)
     time_stamp = Column(DateTime(timezone=True))
+    view_count = Column(Integer)
 
     #likes = relationship("Like", back_populates=)
 
