@@ -21,7 +21,7 @@ class Agent:
             system_prompt: str,
             _model_name: str, 
             _llm:str,
-            _name: str, 
+            name: str = "Agent",
             amt:int = -1,
             temp:int = 0.8,
         ):
@@ -36,7 +36,7 @@ class Agent:
         self.modelName = _model_name
         self.llm = _llm
         self.client = ollama.AsyncClient()
-        self.name = _name
+        self.name = name
         self.skills = []
         
         pass
