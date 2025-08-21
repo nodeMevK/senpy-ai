@@ -8,3 +8,6 @@
 6. Recently put ollama into a docker image.. need to mess around with this
 7. Can now get info from db successfully, will need to feed data to agent next
 8. Have to get back to swarm
+
+
+9. Changed repo name 
